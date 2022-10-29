@@ -1,0 +1,12 @@
+// Flexbox utility Classes
+$flexdirection: ("row", "row-reverse", "column", "column-reverse");
+
+.flex {
+  display: flex;
+}
+
+@each $dir in $flexdirection {
+  .flex-#{$dir} {
+    flex-direction: #{$dir};
+  }
+}

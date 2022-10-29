@@ -1,0 +1,6 @@
+// Convert Pixels to Rem
+
+@function toRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}

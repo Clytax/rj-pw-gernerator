@@ -1,0 +1,25 @@
+// Everything that has to do with text! Font sizes, line heights, font families, etc.
+@use "../abstract/functions" as *;
+$type-scale: (
+  900: toRem(20),
+);
+
+// Change Font-Size when the screen is at least 30em (480px)
+@media screen and (min-width: 30em) {
+  .fs-900 {
+    font-size: toRem(35);
+  }
+}
+
+html,
+body {
+  font-family: sans-serif;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-regular {
+  font-weight: 400;
+}

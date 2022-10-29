@@ -1,0 +1,36 @@
+// SCSS MIXINS
+
+@use "variables" as *;
+@use "../base/typography" as *;
+@use "media-query" as *;
+
+:root {
+  // Create color variables
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  // Create font-size variables
+
+  @each $size, $value in $type-scale {
+    --fs-#{$size}: #{$value};
+  }
+}
+
+// Create font-size classes
+@each $size, $value in $type-scale {
+  .fs-#{$size} {
+    font-size: var(--fs-#{$size});
+  }
+}
+
+@each $name, $value in $colors {
+  .text-#{$name} {
+    color: #{$value};
+  }
+  .bg-#{$name} {
+    background-color: #{$value};
+  }
+}
